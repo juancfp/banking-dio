@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Autor: Juan Carlos Fernandes Pereira -->
+<!-- Criação: 06-07-2022 -->
+<!-- Descrição: Configuração de todas as DB do projeto JPA -->
+<!-- Última modificação: 06-07-2022  -->
+<persistence version="2.2"
+             xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+    <persistence-unit name="banking">
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <properties>
+            <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost/banking" />
+            <property name="javax.persistence.jdbc.user" value="root" />
+            <property name="javax.persistence.jdbc.password" value="" />
+            <!-- Dialeto é feito para traduzir o mapeamento do hibernate em comandos do mysql         -->
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect" />
+            <property name="hibernate.hb2ddl.auto" value="update" />
+            <property name="hibernate.format_sql" value="true" />
+            <property name="hibernate.connection.autocommit" value="true" />
+        </properties>
+    </persistence-unit>
+</persistence>
